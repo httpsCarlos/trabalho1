@@ -1,0 +1,322 @@
+#Atividade 1 - Estruturas de dados
+#Conjuntos
+#1
+print("Exercicio 1")
+conjuntodez = {1,2,3,4,5,6,7,8,9,10}
+print(conjuntodez)
+print("\n")
+#2
+print("Exercicio 2")
+conjuntoa = {1,2,3,4,5}
+conjuntob = {3,4,5,6,7}
+print("Conjunto A: ",conjuntoa)
+print("Conjunto B: ",conjuntob)
+uniaoa = conjuntoa.union(conjuntob)
+print("União: ",uniaoa)
+interseccao = conjuntoa.intersection(conjuntob)
+print("Interseção: ",interseccao)
+diferenca = conjuntoa.difference(conjuntob)
+print("Diferença: ",diferenca)
+print("\n")
+#3
+print("Exercicio 3")
+vogais = {'a','e','i','o','u'}
+palavra = input("Digite uma palavra: ")
+vogal = vogais.intersection(palavra)
+print(vogal)
+print("\n")
+#4
+print("Exercicio 4")
+frutas1 = {'maracujá','melancia','banana'}
+frutas2 = {'maçã','maracujá','uva'}
+print("Frutas 1: ",frutas1)
+print("Frutas 2: ",frutas2)
+fruta = frutas1.intersection(frutas2)
+print("Fruta presente nos dois conjuntos:",fruta)
+print("\n")
+#5
+print("Exercicio 5")
+conjuntonum = {7,8,15,16,5,4}
+print("Conjunto: ",conjuntonum)
+print("Menor numero: ",['4'])
+print("Maior numero: ",['16'])
+print("\n")
+#6
+print("Exercicio 6")
+arcoiris = {'vermelho', 'laranja', 'amarelo', 'verde',
+'azul', 'anil','violeta'}
+cor = input("Digite uma cor: ")
+if cor in arcoiris:
+  print(cor, " esta presente no arco iris.")
+print("\n")
+#7
+print("Exercicio 7")
+semana = {'segunda', 'terça', 'quarta', 'quinta',
+'sexta', 'sábado', 'domingo'}
+semana.remove('segunda')
+semana.remove('terça')
+semana.remove('quarta')
+semana.remove('quinta')
+semana.remove('sexta')
+print(semana)
+print("\n")
+#8
+print("Exercicio 8")
+conjuntovinte = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20}
+conjuntopares = {2,4,6,8,10}
+diferencapares = conjuntovinte.difference(conjuntopares)
+print("Diferença: ",diferencapares)
+print("\n")
+#9
+print("Exercicio 9")
+notas = {1.6,3.0,1,1,1.8}
+print("Notas do aluno: ",notas)
+notatotal = sum(notas)
+if notatotal > 7:
+  print("Aluno aprovado.")
+else:
+  print("Aluno reprovado.")
+print("\n")
+#10
+print("Exercicio 10")
+numerosprimos = (2,3,5,7,11,13,17,19)
+verificacao = int(input("Digite um numero de 1 a 20: "))
+if verificacao in numerosprimos:
+  print("Esse numero é primo.")
+else:
+  print("Esse numero não é primo.")
+print("\n")
+#Dicionário
+#Nº1: 
+print("Exercício 1")
+dic1 = {}
+dic1['cidade:'] = 'Guarapuava'
+dic1['estado:'] = 'Paraná'
+chaves1 = dic1.keys()
+valores1 = dic1.values()
+for chaves1,valores1 in dic1.items():
+  print(chaves1,valores1)
+print("\n")
+
+#Nº2
+print("Exercício 2")
+dic2 = {'nome:':'Kauan', 'idade:':18, 'cidade:':'Guarapuava'}
+chaves2 = dic2.keys()
+valores2 = dic2.values()
+for chaves2,valores2 in dic2.items():
+  print(chaves2,valores2)
+print("\n")
+
+#Nº3
+print("Exercício 3")
+dic3 = {'barra de chocolate:':7,
+        'arroz branco:':15,
+        'sabão em pó:':9}
+chaves3 = dic3.keys()
+valores3 = dic3.values()
+for chaves3,valores3 in dic3.items():
+  print(chaves3,valores3)
+print("\n")
+
+#Nº4
+print("Exercício 4")
+dic4 = {'Rio de Janeiro:':'Rio de Janeiro',
+        'Paraná:':'Curitiba',
+        'Amapá:':'Macapá'}
+estado = input("Escolha um dos três estados a seguir - Rio de Janeiro, Paraná, Amapá:")
+if 'Rio de Janeiro' in estado:
+  print("A capital é Rio de Janeiro")
+elif 'Paraná' in estado:
+  print("A capital é Curitiba")
+elif 'Amapá' in estado:
+  print("A capital é Macapá")
+else:
+  print("A resposta está incorreta, escolha uma das opções citadas.")
+print("\n")
+
+
+#Nº5
+print("Exercício 5")
+dic5 = {'Guarapuava: ':182644,
+        'Maringá: ':403063,
+        'Foz do Iguaçu: ':258248,
+        'Castro: ':71809,
+        'Morretes: ':16446}
+for chaves5,valores5 in dic5.items():
+  print(chaves5,valores5)
+print("A cidade com a maior população é Maringá")
+print("\n")
+
+#Nº6
+print("Exercício 6")
+dic6 = {'pinhão':174,
+        'milho':70,
+        'mexerica':98}
+alimento = input("Digite um dos alimentos a seguir para saber a quantidade de calorias do mesmo: Pinhão, Feijão, Milho: ")
+if 'pinhão' in alimento:
+  print("Em cada 100g de pinhão, há 174 calorias")
+elif 'milho' in alimento:
+  print("Em 100g de milho cozido, há 98 calorias")
+elif 'mexerica' in alimento:
+  print("Em 100g de mexerica, há 53 calorias")
+else:
+  print("A resposta está incorreta, escolha uma das opções citadas.")
+print("\n")
+
+
+#Nº7
+print("Exercício 7")
+dic7 = {'tubarão':'peixe',
+        'jacaré':'réptil',
+        'sapo':'anfíbio',
+        'tigre':'mamífero',
+        'águia':'ave'}
+for animal in dic7:
+  print(animal)
+print("\n")
+
+
+
+#Nº8
+print("Exercício 8")
+dic8 = {'Suécia':'amarelo e azul',
+        'França':'azul, branco e vermelho',
+        'Inglaterra':'vermelho e branco',
+        'África do Sul':'preto, branco, vermelho, amarelo, verde, azul',
+        'Brasil':'verde, amarelo, azul, branco'}
+for bandeira in dic8:
+  print(bandeira)
+print("\n")
+
+
+#Nº9
+print("Exercício 9")
+dic9 = {'Uva = ':'roxa ou verde',
+        'Maçã = ':'verde ou vermelha',
+        'Melão = ':'amarelo',
+        'Abacate = ':'verde',
+        'Tangerina = ':'laranja'}
+chaves9 = dic9.keys()
+valores9 = dic9.values()
+for chaves9,valores9 in dic9.items():
+  print(chaves9,valores9)
+print("\n")
+
+#Nº10
+print("Exercício 10")
+dic10 = {'Vôlei':6,
+         'Handebol':7,
+         'Badminton':1 & 2}
+jogo = input("Digite um dos esportes a seguir para saber a quantidade de jogadores necessária: Vôlei, Handebol, Badminton: ")
+if 'vôlei' in jogo:
+  print("São necessários 6 jogadores")
+elif 'handebol' in jogo:
+  print("São necessários 7 jogadores")
+elif 'badminton' in jogo:
+  print("É necessário 1 jogador na modalidade simples, e 2 na modalidade em duplas")
+else:
+  print("A resposta está incorreta, escolha uma das opções citadas.")
+print("\n")
+#Tuplas
+#1
+Tupla = (1,2,3,4,5,6,7,8,9,10)
+print(Tupla)
+print("\n")
+#2
+Tupla2 = ('Brasil', 'EUA', 'Canada' )
+
+if 'EUA' in Tupla2: 
+    print ("O elemento EUA existe na Lista!")
+print("\n")
+#3
+valor_refeicao = 35.00
+taxa_servico = 10.00
+valor_total = valor_refeicao + taxa_servico
+
+Tupla_restaurante = (valor_refeicao, taxa_servico, valor_total)
+
+print(Tupla_restaurante)
+
+ 
+print("\n") 
+ #4 
+Tupla_nomes = ('GUI', 'MAICON', 'KAUAN', 'TAVARES', 'Carlos')
+
+numero_digitado = int(input("Digite um número entre 1 e 5: "))
+
+if 1 <= numero_digitado <= 5:
+    nome_correspondente =Tupla_nomes[numero_digitado - 1]
+    print(f"O nome correspondente ao número {numero_digitado} é: {nome_correspondente}")
+else:
+    print("Numero fora do intervalo válido!")
+print("\n") 
+ #5
+Tupla_notas = (7.5, 4.3, 6.9, 9.0, 7.1)
+ 
+media = sum(Tupla_notas) / len(Tupla_notas)
+ 
+print(f"A média das notas do aluno é: {media:.2f}")
+
+#6
+
+arco_iris = ('vermelho', 'laranja', 'amarelo', 'verde', 'azul', 'anil', 'violeta')
+
+cor = input("Digite uma cor do arco-íris: ")
+
+if cor in arco_iris:
+    print(f"A cor {cor} está no arco-íris!")
+else:
+    print(f"A cor {cor} não está no arco-íris.")
+    
+print ("\n")
+
+#7 
+
+temperaturas_semana = (20, 25, 32, 12, 27, 21, 23)
+
+print(f"Temperatura máxima da semana: 32°C")
+print(f"Temperatura mínima da semana: 12°C")
+print ("\n")
+
+#8
+
+frutas_cores = (
+    ("Cereja", "Vermelha"),
+    ("Abacaxi", "Amarelo"),
+    ("Pitaya", "Rosa"),
+    ("Uva", "Roxa"),
+    ("Abacate", "Verde")
+)
+
+for fruta, cor in frutas_cores:
+    print(f"{fruta}: {cor}")
+
+print ("\n")
+
+#9
+
+tupla1 = tuple(range(1, 11))  
+tupla2 = tuple(range(5, 16))  
+
+conjunto1 = set(tupla1)
+conjunto2 = set(tupla2)
+
+intersecao = conjunto1 & conjunto2
+
+print("Interseção entre as duas tuplas:")
+for numero in intersecao:
+    print(numero)
+
+print ("\n")
+
+#10 
+
+alfabeto = ('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
+
+vogais = ('a', 'e', 'i', 'o', 'u')
+
+diferenca = tuple(letra for letra in alfabeto if letra not in vogais)
+
+print("Diferença entre as duas tuplas (consoantes):")
+for letra in diferenca:
+    print(letra)
